@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    font-family: 'Roboto';
+    background: #EEEEEE;
+    font-size: 18px;
+    height: 100vh;
+}
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+.container h1{
+        margin: 1em 0;      
+}
+.container p{
+        line-height: 1.7rem;
+}
+.left{
+        background: linear-gradient(160deg, #601df7 0%,#8800ff 100%);
+        padding: 1em;
+}
+.left p, h1{
+            color: white;
+}
+.right p{
+        margin-top: -2em;
+        font-family: 'Good Times';
+        font-size: 24px;
+}
+.light {
+        color: rgba(255,255,255,.7) !important;
+        margin-top: 2em;
+}
+.right input,button{
+        width: calc(65% - 3em);
+        padding: .5em;
+        font-family: 'Copperplate Gothic';
+        font-size: 1.3rem;
+        outline: none;
+        margin: 1em;
+        border-radius: 24px;
+        text-align: center;
+        transition: 0.25s;
+        border-color: #8800ff;
+}
+.right input[type = "text"]:focus{
+        width: calc(65% - 2em);
+        border-color: #2905f5;
+}
+.right button{
+        width: calc(70% - 3em);
+        margin: 0;
+        background: #8800ff;
+        color: white;
+        cursor: pointer;
+        border-color: black;
+}       
+.right button:hover{
+        background: #5408e0;
+}
+@media only screen and (min-width: 768px){
+
+        body{
+                font-size: 20px;
+        }
+        button{
+                width:56% !important;
+        }
+        .right{
+                margin-top: 70px;
+        }
+        input{
+                width: calc(60% - 3em) !important;
+        }
+        .right input[type = "text"]:focus{
+                width: calc(60% - 1em) !important;
+                border-color: black;
+        }
+}
+
+@media only screen and (min-width: 1024px){
+        
+        p{
+                line-height: 1.7em !important;
+        }
+        .inner{
+                display: grid;
+                grid-template-columns: 55% auto;
+        }
+        .left{
+                text-align: left;
+                padding: 0 2em;
+                height: 100vh;
+                display: grid;
+        }
+        .content{
+                padding: 0 3em;
+        }
+        .content h1{
+                margin: 0;
+                font-size: 2em;
+                padding-top: 28%; 
+        }
+        .right{
+                text-align: center;
+                align-self: center;
+                padding: 0 2em 1.5em;
+                justify-self: center;
+        }
+        .right input{
+                width: calc(100% - 3em) !important;
+                margin: 1em 0;
+        }
+        .right input[type = "text"]:focus{
+                width: calc(100% - 1em) !important;
+                border-color: black;
+        }
+        .right button{
+                width: 90% !important;
+        }
+        
+        .proto-container{
+                clip-path: inset(0 45% 0 0);
+                position: absolute;
+                top:20%;
+                height: 70%;
+                z-index:0;
+                width: 100%;
+                
+        }
+        .proto{
+                border: 3px solid rgba(255, 255, 255, 0.1);
+                width: 19%;
+                height: 80%;
+                float: left;
+                margin-left: 1em;
+                transform: translateX(10%);
+        }
+}
