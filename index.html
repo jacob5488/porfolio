@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latitude</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="proto-container">
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>
+        <div class="proto"></div>   
+    </div>
+
+    <div class="container">
+        <div class="inner">
+            <div class="left">
+                
+
+                <div class="content">
+                    <h1>Latitudes</h1>
+                    <p>Such astonishing visuals that the nature prepares are more pronounced in the Mid Latitudes. While it is noon at one place it is midnight elsewhere. Two different days but at the same time on the earth! Just like the wonders of the seasons, the sequence of time is also diverse.</p>
+                    <p class="light">It is autumn season in the Northern Hemisphere from 23 September to 22 December.</p>
+                </div>
+            </div>
+            <div class="right">
+                <p>Contact Me</p>
+                <input type="text" id="email" placeholder="Your Email">
+                <button onclick="check()" >NOTIFY ME</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let left = document.querySelector('.left');
+        let content = document.querySelector('.content');
+        let protos = document.querySelectorAll('.proto');
+
+        left.addEventListener('mousemove', (event) => {
+            let move = (event.clientX * 0.05) + 4;
+            let move2 = (event.clientX * 0.003);
+            content.style.transform = `translateX(-${move2}%)`;
+
+            protos.forEach((proto) => {
+                proto.style.transform = `translateX(${move}%)`;
+            })
+        })  
+
+        const email = document.querySelector("#email");
+        const btn = document.querySelector("button");
+        let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        function check(){
+            if(email.value.match(regExp)){
+                email.style.background = "#44e286";
+            }
+            else{
+                alert("Enter Valid Email");
+                email.style.background = "#f06252";
+            }
+            if(email.value == ""){
+                alert("Enter Valid Email");
+                email.style.background = "#f06252";
+            }
+        }
+    </script>
+
+</body>
+</html>
